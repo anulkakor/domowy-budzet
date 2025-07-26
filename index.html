@@ -379,259 +379,6 @@
                 padding: 20px;
             }
         }
-        /* Modal styles */
-        .subscription-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .subscription-modal-content {
-            background: white;
-            border-radius: 20px;
-            max-width: 1200px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 20px;
-            border-radius: 20px 20px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .close-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2em;
-            cursor: pointer;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .close-btn:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .plans-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 30px;
-        }
-
-        .plan-card {
-            border: 3px solid #e0e0e0;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .plan-card.free {
-            border-color: #9e9e9e;
-        }
-
-        .plan-card.premium {
-            border-color: var(--warning-color);
-            box-shadow: 0 5px 20px rgba(255, 152, 0, 0.3);
-        }
-
-        .plan-card.lifetime {
-            border-color: var(--primary-color);
-            box-shadow: 0 5px 20px rgba(233, 30, 99, 0.3);
-        }
-
-        .plan-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #ffd700, #ffb300);
-            color: #333;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
-        }
-
-        .plan-header h3 {
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-
-        .plan-price {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin: 10px 0;
-        }
-
-        .plan-period {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .savings {
-            background: var(--success-color);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-top: 5px;
-        }
-
-        .plan-features {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            text-align: left;
-        }
-
-        .plan-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .plan-btn {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .plan-btn.current {
-            background: #e0e0e0;
-            color: #666;
-            cursor: not-allowed;
-        }
-
-        .premium-btn {
-            background: linear-gradient(135deg, var(--warning-color), #f57c00);
-            color: white;
-        }
-
-        .premium-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
-        }
-
-        .lifetime-btn {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-        }
-
-        .lifetime-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
-        }
-
-        .trial-info {
-            background: var(--info-color);
-            color: white;
-            padding: 8px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-
-        .modal-footer {
-            text-align: center;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 0 0 20px 20px;
-            color: #666;
-        }
-
-        .payment-modal-content {
-            max-width: 600px;
-        }
-
-        /* Upgrade banners */
-        .upgrade-banner {
-            background: linear-gradient(135deg, var(--warning-color), #f57c00);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 10px 0;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .upgrade-banner:hover {
-            transform: translateY(-2px);
-        }
-
-        .limit-warning {
-            background: linear-gradient(135deg, var(--error-color), #c62828);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            font-size: 14px;
-        }
-
-        /* Dark mode styles */
-        body.dark-mode .subscription-modal-content,
-        body.dark-mode .payment-modal-content {
-            background: #333;
-            color: #fff;
-        }
-
-        body.dark-mode .plan-card {
-            background: #444;
-            border-color: #555;
-            color: #fff;
-        }
-
-        body.dark-mode .modal-footer {
-            background: #444;
-        }
-
-        @media (max-width: 768px) {
-            .plans-container {
-                grid-template-columns: 1fr;
-                padding: 20px;
-            }
-            
-            .subscription-modal-content {
-                margin: 10px;
-            }
-        }
-    </style>
-</head>
         .container {
             max-width: 1600px;
             margin: 0 auto;
@@ -1182,9 +929,6 @@
                 <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData()">
                 <button class="header-btn" onclick="document.getElementById('importFile').click()">📂 Wczytaj</button>
                 <button class="header-btn" onclick="clearAllData()">🗑️ Wyczyść</button>
-                <button class="header-btn" onclick="showSubscriptionModal()">
-                    <span id="planStatus">🆓 Darmowy</span>
-                </button>
             </div>
         </div>
 
@@ -1640,70 +1384,6 @@
     <script>
         console.log('🚀 Inicjalizacja aplikacji budżetu domowego...');
 
-        // Plany subskrypcji
-        const subscriptionPlans = {
-            free: {
-                name: 'Darmowy',
-                price: 0,
-                features: [
-                    'Podstawowy budżet (max 10 dochodów/wydatków)',
-                    'Proste wykresy',
-                    'Export danych',
-                    'Brak reklam przez 7 dni'
-                ],
-                limits: {
-                    incomes: 10,
-                    expenses: 10,
-                    goals: 3,
-                    debts: 2,
-                    payments: 5,
-                    charts: ['basic']
-                }
-            },
-            premium: {
-                name: 'Premium Miesięczny',
-                price: 19.99,
-                period: 'miesięcznie',
-                features: [
-                    'Nieograniczona liczba transakcji',
-                    'Zaawansowane analizy AI',
-                    'Wszystkie typy wykresów',
-                    'Automatyczne kursy walut',
-                    'Powiadomienia e-mail',
-                    'Kopie zapasowe w chmurze',
-                    'Eksport do Excel/PDF',
-                    'Wsparcie priorytetowe'
-                ],
-                limits: null // brak limitów
-            },
-            lifetime: {
-                name: 'Dożywotnia Licencja',
-                price: 299.99,
-                period: 'jednorazowo',
-                features: [
-                    'Wszystkie funkcje Premium',
-                    'Płatność jednorazowa',
-                    'Dożywotnie aktualizacje',
-                    'Beta tester nowych funkcji',
-                    'Dedykowane wsparcie',
-                    'Możliwość wpływania na rozwój'
-                ],
-                limits: null,
-                badge: '👑 BESTSELLER'
-            }
-        };
-
-        // Aktualna subskrypcja użytkownika
-        let userSubscription = {
-            plan: 'free',
-            expiryDate: null,
-            trialUsed: false,
-            features: subscriptionPlans.free.features
-        };
-
-        // Globalne dane aplikacji
-        let data = {
-
         // Globalne dane aplikacji
         let data = {
             incomes: [],
@@ -1900,12 +1580,6 @@ async function fetchExchangeRates() {
         function addIncome() {
             console.log('💰 Dodawanie dochodu...');
 
-            if (!checkPlanLimits('incomes', data.incomes.length)) {
-                return;
-            }
-
-            const source = document.getElementById('incomeSource').value.trim();
-
             const source = document.getElementById('incomeSource').value.trim();
             const category = document.getElementById('incomeCategory').value;
             const amount = parseFloat(document.getElementById('incomeAmount').value);
@@ -1975,10 +1649,6 @@ async function fetchExchangeRates() {
         function addExpense() {
             console.log('💸 Dodawanie wydatku...');
 
-            if (!checkPlanLimits('expenses', data.expenses.length)) {
-                return;
-            }
-
             const name = document.getElementById('expenseName').value.trim();
             const category = document.getElementById('expenseCategory').value;
             const amount = parseFloat(document.getElementById('expenseAmount').value);
@@ -2047,10 +1717,6 @@ async function fetchExchangeRates() {
         // ========== ZARZĄDZANIE OSZCZĘDNOŚCIAMI ==========
         function addSaving() {
             console.log('🐷 Dodawanie planu oszczędności...');
-
-            if (!checkPlanLimits('savings', data.savings.length)) {
-                return;
-            }
 
             const goal = document.getElementById('savingGoal').value.trim();
             const amount = parseFloat(document.getElementById('savingAmount').value);
@@ -2126,10 +1792,6 @@ async function fetchExchangeRates() {
         // ========== ZARZĄDZANIE CELAMI ==========
         function addGoal() {
             console.log('🎯 Dodawanie celu...');
-
-            if (!checkPlanLimits('goals', data.goals.length)) {
-                return;
-            }
 
             const name = document.getElementById('goalName').value.trim();
             const target = parseFloat(document.getElementById('goalTarget').value);
@@ -2233,10 +1895,6 @@ async function fetchExchangeRates() {
         // ========== KALENDARZ PŁATNOŚCI ==========
         function addPayment() {
             console.log('📅 Dodawanie płatności...');
-            
-            if (!checkPlanLimits('payments', data.payments.length)) {
-                return;
-            }
 
             const name = document.getElementById('paymentName').value.trim();
             const date = document.getElementById('paymentDate').value;
@@ -2473,11 +2131,7 @@ async function fetchExchangeRates() {
         // ========== ZARZĄDZANIE DŁUGAMI ==========
         function addDebt() {
             console.log('💳 Dodawanie długu...');
-            
-            if (!checkPlanLimits('debts', data.debts.length)) {
-                return;
-            }
-            
+
             const name = document.getElementById('debtName').value.trim();
             const amount = parseFloat(document.getElementById('debtAmount').value);
             const installment = parseFloat(document.getElementById('debtInstallment').value);
@@ -3724,54 +3378,6 @@ async function fetchExchangeRates() {
             }
         }
 
-        // ========== SYSTEM SUBSKRYPCJI ==========
-        
-        // Sprawdzanie limitów planu
-        function checkPlanLimits(type, currentCount) {
-            if (userSubscription.plan === 'free') {
-                const limits = subscriptionPlans.free.limits;
-                if (limits[type] && currentCount >= limits[type]) {
-                    showUpgradePrompt(type);
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        // Wyświetlanie promptu upgrade'u
-        function showUpgradePrompt(limitType) {
-            const messages = {
-                incomes: 'Osiągnąłeś limit 10 dochodów w planie darmowym',
-                expenses: 'Osiągnąłeś limit 10 wydatków w planie darmowym',
-                goals: 'Osiągnąłeś limit 3 celów w planie darmowym',
-                debts: 'Osiągnąłeś limit 2 długów w planie darmowym',
-                payments: 'Osiągnąłeś limit 5 płatności w planie darmowym'
-            };
-            
-            const banner = document.createElement('div');
-            banner.className = 'upgrade-banner';
-            banner.innerHTML = `
-                <h3>🚀 ${messages[limitType]}</h3>
-                <p>Przejdź na Premium, aby cieszyć się nieograniczonymi możliwościami!</p>
-                <button style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 5px; margin-top: 10px;">
-                    ⭐ Zobacz plany
-                </button>
-            `;
-            
-            banner.onclick = () => showSubscriptionModal();
-            
-            // Dodaj banner na górze kontenera
-            const container = document.querySelector('.container');
-            container.insertBefore(banner, container.firstChild);
-            
-            // Usuń banner po 10 sekundach
-            setTimeout(() => {
-                if (banner.parentNode) {
-                    banner.parentNode.removeChild(banner);
-                }
-            }, 10000);
-        }
-
         // ========== USTAWIENIA ==========
         function updateDefaultCurrency() {
             const currency = document.getElementById('defaultCurrency').value;
@@ -3911,106 +3517,5 @@ async function fetchExchangeRates() {
             }
         }
     </script>
-    console.log('✅ Wszystkie funkcje załadowane pomyślnie!');
-    </script>
-
-    <!-- Modal planów subskrypcji -->
-    <div id="subscriptionModal" class="subscription-modal" style="display: none;">
-        <div class="subscription-modal-content">
-            <div class="modal-header">
-                <h2>💰 Wybierz swój plan</h2>
-                <button class="close-btn" onclick="closeSubscriptionModal()">&times;</button>
-            </div>
-            
-            <div class="plans-container">
-                <!-- Plan Darmowy -->
-                <div class="plan-card free">
-                    <div class="plan-header">
-                        <h3>🆓 Darmowy</h3>
-                        <div class="plan-price">0 zł</div>
-                        <div class="plan-period">zawsze</div>
-                    </div>
-                    <ul class="plan-features">
-                        <li>✅ Podstawowy budżet (max 10 pozycji)</li>
-                        <li>✅ Proste wykresy</li>
-                        <li>✅ Export danych</li>
-                        <li>✅ Bez reklam przez 7 dni</li>
-                        <li>❌ Analizy AI</li>
-                        <li>❌ Kursy walut</li>
-                        <li>❌ Kopie zapasowe</li>
-                    </ul>
-                    <button class="plan-btn current" onclick="selectPlan('free')">
-                        Aktualny plan
-                    </button>
-                </div>
-
-                <!-- Plan Premium -->
-                <div class="plan-card premium">
-                    <div class="plan-header">
-                        <h3>⭐ Premium</h3>
-                        <div class="plan-price">19,99 zł</div>
-                        <div class="plan-period">miesięcznie</div>
-                    </div>
-                    <ul class="plan-features">
-                        <li>✅ Nieograniczone transakcje</li>
-                        <li>✅ Zaawansowane analizy AI</li>
-                        <li>✅ Wszystkie wykresy</li>
-                        <li>✅ Automatyczne kursy walut</li>
-                        <li>✅ Powiadomienia email</li>
-                        <li>✅ Kopie zapasowe</li>
-                        <li>✅ Export Excel/PDF</li>
-                        <li>✅ Wsparcie priorytetowe</li>
-                    </ul>
-                    <button class="plan-btn premium-btn" onclick="selectPlan('premium')">
-                        🚀 Wybierz Premium
-                    </button>
-                    <div class="trial-info">💡 Darmowy trial 14 dni!</div>
-                </div>
-
-                <!-- Plan Dożywotni -->
-                <div class="plan-card lifetime">
-                    <div class="plan-badge">👑 BESTSELLER</div>
-                    <div class="plan-header">
-                        <h3>💎 Dożywotnia</h3>
-                        <div class="plan-price">299,99 zł</div>
-                        <div class="plan-period">jednorazowo</div>
-                        <div class="savings">Oszczędzasz 3600 zł rocznie!</div>
-                    </div>
-                    <ul class="plan-features">
-                        <li>✅ Wszystkie funkcje Premium</li>
-                        <li>✅ Płatność jednorazowa</li>
-                        <li>✅ Dożywotnie aktualizacje</li>
-                        <li>✅ Beta tester funkcji</li>
-                        <li>✅ Dedykowane wsparcie</li>
-                        <li>✅ Wpływ na rozwój app</li>
-                    </ul>
-                    <button class="plan-btn lifetime-btn" onclick="selectPlan('lifetime')">
-                        👑 Kup na zawsze
-                    </button>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <p>🔒 Bezpieczne płatności | 💸 30 dni gwarancji zwrotu | 📞 Wsparcie 24/7</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal płatności -->
-    <div id="paymentModal" class="subscription-modal" style="display: none;">
-        <div class="payment-modal-content">
-            <div class="modal-header">
-                <h2>💳 Finalizuj płatność</h2>
-                <button class="close-btn" onclick="closePaymentModal()">&times;</button>
-            </div>
-            
-            <div id="paymentContent">
-                <!-- Treść zostanie wygenerowana dynamicznie -->
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
 </body>
 </html>
